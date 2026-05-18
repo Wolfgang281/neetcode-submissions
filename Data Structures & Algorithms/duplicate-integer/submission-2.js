@@ -1,0 +1,16 @@
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums) {
+        // let set = new Set()
+        // for(let num of nums){
+        //     if(set.has(num)) return true
+        //     else set.add(num)
+        // }
+        // return false
+
+        return new Set(nums).size !== nums.length;
+    }
+}
