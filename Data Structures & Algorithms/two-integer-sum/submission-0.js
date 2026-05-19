@@ -1,0 +1,17 @@
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @param {number} target
+     * @return {number[]}
+     */
+    twoSum(nums, target) {
+        let map = new Map();
+        for (let i = 0; i < nums.length; i++) {
+            let num = nums[i];
+            let diff = target - num;
+            if (map.has(diff)) return [map.get(diff), i];
+            else map.set(num, i);
+        }
+        
+    }
+}
